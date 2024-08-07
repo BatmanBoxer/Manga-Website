@@ -1,57 +1,98 @@
+import { Height } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
-
 
 const ManhwaofTheWeek = () => {
   return (
-    <Box
-      sx={{
-        position: "relative",
-      }}
-    >
+    <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
       <img
         src="https://gg.asuracomic.net/storage/media/54/conversions/fb9b38c7-optimized.webp"
         alt="Manhwa of the Week"
-        style={{ maxWidth: "100%",aspectRatio:"1.3/2" }} // Ensure the image fits within the Box
-      />
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "fill",
+          display: "block",
+          overflow: "hidden",
+        }}
+      ></img>
       <Box
         sx={{
           position: "absolute",
-          bottom: 0, // Position at the bottom
-          left: 0,
+          bottom: "0px",
           width: "100%",
-          height: "100%", // Cover the whole image
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Low transparency black
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end", // Align children to the bottom
-          padding: "4px", // Adjust padding if needed
+          height: "100%",
+          background: "rgba(0,0,0,0.8)",
+        }}
+      ></Box>
+      <Typography
+        variant="h6"
+        align="start"
+        sx={{
+          padding: "10px",
+          position: "absolute",
+          bottom: "0px",
+          color: "#fff",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
         }}
       >
-        <Typography
-          variant="h6"
-          align="center"
-          sx={{
-            color: "#fff",
-            overflow: "hidden", // Prevent text overflow
-            textOverflow: "ellipsis", // Show ellipsis if text overflows
-            whiteSpace: "nowrap", // Prevent text wrapping
-          }}
-        >
-          Manhwa
-        </Typography>
-      </Box>
+        Manhwa
+      </Typography>
     </Box>
   );
 };
 
+const RecommendedManhwa = () => {
+  return (
+    <Box sx={{maxheight:"100%"}}>
+      <TempleteForRecommendedManhwa />);
+    </Box>
+)
+};
+const TempleteForRecommendedManhwa = () => {
+  return (
+    <Box sx={{ background: "black", overflow: "hidden", position: "relative",maxHeight:"100%" }} className="Batman">
+      <Box sx={{maxHeight:"100%"}}>
+      <img
+        src="https://gg.asuracomic.net/storage/media/54/conversions/fb9b38c7-thumb-small.webp"
+        style={{
+          width: "100%",
+          height: "270px",
+         objectFit: "cover", // Use 'cover' to ensure the image covers the container without distortion
+          display: "block",
+          filter: "blur(15px)",        }}
+      />
 
-
-
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          height: "100%",
+          width: "100%",
+          background: "red",
+          position: "absolute",
+          padding: "50px",
+        }}
+      > 
+        <Box sx={{ flex: 3 }}>asdasd</Box>
+        <img src="https://gg.asuracomic.net/storage/media/54/conversions/fb9b38c7-thumb-small.webp" style={{flex:1,width:"20%",height:"auto",objectFit:"scale-down"}} />
+      </Box>
+    </Box>
+  );
+};
 const Recommendation = () => {
   return (
-    <Box display="flex" gap={1.5} justifyContent="space-between" padding="20px">
-      <Box flex={3} sx={{background:"green"}}>Manhwa of The Week</Box>
-      <Box flex={1} sx={{display:{xs:"none",md:"block"}}}>
+    <Box
+      display="flex"
+      gap={1.5}
+      justifyContent="space-between"
+      sx={{ maxHeight: "270px", overflow: "hidden" }} // Ensure no overflow
+    >
+      <Box flex={3.5} sx={{ background: "green" }}>
+        <RecommendedManhwa/>
+      </Box>
+      <Box flex={1} sx={{ display: { xs: "none", md: "block" } }}>
         <ManhwaofTheWeek />
       </Box>
     </Box>

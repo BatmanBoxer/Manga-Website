@@ -14,7 +14,7 @@ const Content = () => {
     >
 
     {/* left */}
-      <Box sx={{ flex: 2.5, background: "red" ,display:"flex",flexDirection:"column",gap:3}}>
+      <Box sx={{ flex: 2.5, background: "" ,display:"flex",flexDirection:"column",gap:3}}>
         <ManhwaOfTheWeek />
         <PopularToday/>
       </Box>
