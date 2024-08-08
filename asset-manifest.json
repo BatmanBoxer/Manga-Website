@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/fuckmfgit/static/js/main.2c48766e.js",
-    "index.html": "/fuckmfgit/index.html",
-    "main.2c48766e.js.map": "/fuckmfgit/static/js/main.2c48766e.js.map"
+    "main.js": "/static/js/main.2c48766e.js",
+    "index.html": "/index.html",
+    "main.2c48766e.js.map": "/static/js/main.2c48766e.js.map"
   },
   "entrypoints": [
     "static/js/main.2c48766e.js"
