@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import ManhwaOfTheWeek from "../left/Recommendation";
 import Popular from "../right/Popular";
 import PopularToday from "../left/PopularToday";
+import LatestUpdate from "../left/LatestUpdate";
 
 const Content = () => {
   return (
@@ -17,6 +18,7 @@ const Content = () => {
       <Box sx={{ flex: 2.5, background: "" ,display:"flex",flexDirection:"column",gap:3}}>
         <ManhwaOfTheWeek />
         <PopularToday/>
+        <LatestUpdate/>
       </Box>
 
     {/* right */}

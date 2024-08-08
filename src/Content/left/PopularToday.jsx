@@ -1,4 +1,3 @@
-
 import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -31,20 +30,21 @@ const Items = () => {
 const PopularToday = () => {
   return (
     <Box sx={{ padding: "10px", background: "yellow" }}>
+      <h2 style={{marginBottom:"3px"}}>Popular Today</h2>
       <Grid container spacing={1}>
-        <Grid item xs={6} md={4} lg={2.4}>
+        <Grid item xs={6} sm={4} md={4} lg={2.4}>
           <Items />
         </Grid>
-        <Grid item xs={6} md={4} lg={2.4}>
+        <Grid item xs={6} sm={4} md={4} lg={2.4}>
           <Items />
         </Grid>
-        <Grid item xs={6} md={4} lg={2.4}>
+        <Grid item xs={6} sm={4} md={4} lg={2.4}>
           <Items />
         </Grid>
-        <Grid item xs={6} md={4} lg={2.4}>
+        <Grid item xs={6} sm={4} md={4} lg={2.4}>
           <Items />
         </Grid>
-        <Grid item xs={6} md={4} lg={2.4}>
+        <Grid item xs={6} sm={4} md={4} lg={2.4}>
           <Items />
         </Grid>
       </Grid>
@@ -53,4 +53,3 @@ const PopularToday = () => {
 };
 
 export default PopularToday;
-

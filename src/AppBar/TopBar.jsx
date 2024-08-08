@@ -1,11 +1,18 @@
-import { Box } from "@mui/system"
+import { Container, TextField } from "@mui/material";
+import { Box } from "@mui/system";
 
 const TopBar = () => {
   return (
-    <div style={{background:"red"}}>
-     TopBar 
-    </div>
-  )
-}
+    <Box sx={{background: "blue",}}>
+      <Container>
+        <Box sx={{display:"flex" ,justifyContent:"space-between",paddingY:"10px"}}>
+        <Box sx={{padding:"5px"}}>Logo</Box>
+        <TextField placeholder="Search" variant="outlined" size="small" sx={{width:{xs:"70%" ,sm:"auto"}}}></TextField>
 
-export default TopBar
+        </Box>
+      </Container>
+    </Box>
+  );
+};
+
+export default TopBar;
