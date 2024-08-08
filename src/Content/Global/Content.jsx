@@ -24,8 +24,12 @@ const Content = () => {
     {/* right */}
       <Box
         sx={{
+          padding: "5px",
           flex: 1,
-          background: "blue",
+          borderRadius: "5px",  
+          width: "17vw",
+          background: "#17171a",
+          color: "white",
           display: { xs: "none", md: "block" },
         }}
       >

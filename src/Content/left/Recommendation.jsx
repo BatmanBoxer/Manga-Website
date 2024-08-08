@@ -85,7 +85,7 @@ const Recommendation = () => {
   return (
     <Box
       display="flex"
-      gap={1.5}
+      gap={1}
       justifyContent="space-between"
       sx={{ maxHeight: "270px", overflow: "hidden" }} // Ensure no overflow
     >

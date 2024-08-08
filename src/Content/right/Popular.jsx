@@ -3,35 +3,49 @@ import Stack from "@mui/material/Stack";
 
 const PopularLayout = (props) => {
   return (
-    <Box sx={{ display: "flex", height: "104px" }}>
+    <Box sx={{ display: "flex", height: "104px", gap: 3, width: "100%" }}>
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          padding: "10px",
+          padding: "2px",
         }}
       >
         <Button
           variant="outlined"
           color="primary"
           sx={{
+            marginLeft: "10px",
             marginRight: "10px",
-            width: "25px",
+            width: "30px",
             padding: "0",
-            minWidth: "0",
+            height: "30px",
+            minWidth: "30px",
           }}
         >
-    {props.id}
+          {props.id}
         </Button>
         <img
           src="https://gg.asuracomic.net/storage/media/54/conversions/fb9b38c7-optimized.webp"
-          style={{ maxWidth: "70%", height: "90%" }}
+          style={{ height: "90%",minWidth:"65%",borderRadius:"5px" }}
+
         />
       </Box>
 
-      <Box sx={{ display: "flex" ,flexDirection:"column" }}>
-        <Typography variant="h6">ManhwaName</Typography>
+      <Box
+        sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}
+      >
+        <Typography
+          variant="h6"
+          sx={{
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+          }}
+        >
+          ManhwaNameasdasdasdasdassbasljdgfkajdgfkajdsgkajdghfkjasdgfakjsdasd
+        </Typography>{" "}
         <Typography variant="h6">Genre</Typography>
         <Typography variant="h6">Rating</Typography>
       </Box>
@@ -40,8 +54,8 @@ const PopularLayout = (props) => {
 };
 const Popular = () => {
   return (
-    <Box>
-      <h2 style={{padding:"10px"}}>Popular</h2>
+    <Box sx={{ width: "100%"}}>
+      <h2 style={{ padding: "10px" }}>Popular</h2>
       <Stack spacing={2}>
         <PopularLayout id={1} />
         <PopularLayout id={2} />

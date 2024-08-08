@@ -3,8 +3,8 @@ import { Box, height } from "@mui/system";
 const ChapterAndTime = () => {
   return (
     <Box sx={{ display: "flex", gap: 1, justifyContent: "space-between" }}>
-      <Box sx={{ background: "green", padding: "5px" }}>Chapter</Box>
-      <Box sx={{ background: "green", padding: "5px" }}>Time</Box>
+      <Box sx={{ padding: "5px" }}>Chapter</Box>
+      <Box sx={{ padding: "5px" }}>Time</Box>
     </Box>
   );
 };
@@ -24,7 +24,7 @@ const Item = () => {
           <img
             src="https://gg.asuracomic.net/storage/media/54/conversions/fb9b38c7-optimized.webp"
             alt="placeholder"
-            style={{ height: "100%" }}
+            style={{ height: "100%", borderRadius: "5px" }}
           />
         </Box>
         <Box sx={{ flex: 3 }}>
@@ -40,8 +40,8 @@ const Item = () => {
 
 const LatestUpdate = () => {
   return (
-    <Box sx={{ background: "green" }}>
-      <h2 style={{padding:"10px"}}>Latest Update</h2>
+    <Box sx={{ background: "#17171a", color: "white" }}>
+      <h2 style={{ padding: "10px" }}>Latest Update</h2>
       <Grid container spacing={2}>
         <Item />
         <Item />

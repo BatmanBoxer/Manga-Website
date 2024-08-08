@@ -6,7 +6,8 @@ import Content from "./Content/Global/Content";
 
 function App() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: {sm:0,md:2} }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: {sm:0,md:4},background:"#1f1c26" }}>
+
       <Bar />
       <Container
         maxWidth="lg"
