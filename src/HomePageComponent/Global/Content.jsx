@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/system";
+import { Box } from "@mui/material";
 import ManhwaOfTheWeek from "../left/Recommendation";
 import Popular from "../right/Popular";
 import PopularToday from "../left/PopularToday";

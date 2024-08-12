@@ -1,11 +1,22 @@
-import { Container, TextField } from "@mui/material";
+import { Container, IconButton, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import { InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const TopBar = () => {
+  const [text, setText] = useState("")
+  const navigate = useNavigate()
+
+  const handleChange = (e) => {
+    setText(e.target.value)
+  }
+  const handleSubmit = () => {
+    navigate(`/search/${text.replaceAll(" ", "-")}`)
+  }
   return (
-    <Box sx={{ background: {xs:"#6e26b5",sm:"#000000"} }}>
+    <Box sx={{ background: { xs: "#6e26b5", sm: "#000000" } }}>
       <Container>
         <Box
           sx={{
@@ -14,11 +25,13 @@ const TopBar = () => {
             paddingY: "5px",
           }}
         >
-          <Box sx={{ padding: "0px",color:"white" }}><img src="https://asuracomic.net/images/logo.png" width="40px"/></Box>
+          <Box sx={{ padding: "0px", color: "white" }}><img src="https://asuracomic.net/images/logo.png" width="40px" /></Box>
           <TextField
             placeholder="Search"
             variant="outlined"
             size="small"
+            onChange={handleChange}
+            onSubmit={handleSubmit}
             sx={{
               height: "70%",
               width: {
@@ -29,13 +42,13 @@ const TopBar = () => {
                 color: "white",
               },
               "& .MuiInputBase-input": {
-                color: "white", // Set the text color to white
+                color: "white",
               },
               borderRadius: "10px",
               background: "#333333",
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
-                  borderColor: "transparent", // Remove border color
+                  borderColor: "transparent",
                 },
                 "&:hover fieldset": {
                   borderColor: "transparent", // Remove border color on hover
@@ -48,7 +61,9 @@ const TopBar = () => {
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <SearchIcon sx={{ color: "white" }} />
+                  <IconButton onClick={handleSubmit}>
+                    <SearchIcon sx={{ color: "white" }} />
+                  </IconButton>
                 </InputAdornment>
               ),
             }}

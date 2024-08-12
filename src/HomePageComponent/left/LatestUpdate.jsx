@@ -3,8 +3,8 @@ import { Box, height } from "@mui/system";
 const ChapterAndTime = () => {
   return (
     <Box sx={{ display: "flex", gap: 1, justifyContent: "space-between" }}>
-      <Box sx={{ padding: "5px" }}>Chapter</Box>
-      <Box sx={{ padding: "5px" }}>Time</Box>
+      <Box>Chapter</Box>
+      <Box>Time</Box>
     </Box>
   );
 };
@@ -12,13 +12,14 @@ const Item = () => {
   return (
     <Grid item md={6} xs={12}>
       <Box
-        sx={{
-          display: "flex",
-          height: "15vh",
-          paddingX: "10px",
-          paddingY: "5px",
-          gap: 1,
-        }}
+       sx={{
+        display: "flex",        
+        height: "15vh",           
+        paddingX: "10px",        
+        paddingY: "5px",        
+        gap: 1, 
+        justifyContent:"space-evenly"             
+      }}
       >
         <Box sx={{ flex: 1 }}>
           <img
@@ -40,7 +41,7 @@ const Item = () => {
 
 const LatestUpdate = () => {
   return (
-    <Box sx={{ background: "#17171a", color: "white" }}>
+    <Box sx={{ background: "#17171a", color: "white" ,overflow:"hidden"}}>
       <h2 style={{ padding: "10px" }}>Latest Update</h2>
       <Grid container spacing={2}>
         <Item />

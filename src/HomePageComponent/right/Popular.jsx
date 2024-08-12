@@ -13,19 +13,25 @@ const PopularLayout = (props) => {
         }}
       >
         <Button
-          variant="outlined"
-          color="primary"
-          sx={{
-            marginLeft: "10px",
-            marginRight: "10px",
-            width: "30px",
-            padding: "0",
-            height: "30px",
-            minWidth: "30px",
-          }}
-        >
-          {props.id}
-        </Button>
+      variant="outlined"
+      color="primary"
+      sx={{
+        marginLeft: "10px",
+        marginRight: "10px",
+        width: "30px",
+        padding: "0",
+        height: "30px",
+        minWidth: "30px",
+        color: "white", // Text color
+        borderColor: "white", // Border color
+        '&:hover': {
+          borderColor: "white", // Border color on hover
+          backgroundColor: "rgba(255, 255, 255, 0.1)", // Optional: Light background color on hover
+        },
+      }}
+    >
+      {props.id}
+    </Button>
         <img
           src="https://gg.asuracomic.net/storage/media/54/conversions/fb9b38c7-optimized.webp"
           style={{ height: "90%",minWidth:"65%",borderRadius:"5px" }}
@@ -45,7 +51,7 @@ const PopularLayout = (props) => {
           }}
         >
           ManhwaNameasdasdasdasdassbasljdgfkajdgfkajdsgkajdghfkjasdgfakjsdasd
-        </Typography>{" "}
+        </Typography>
         <Typography variant="h6">Genre</Typography>
         <Typography variant="h6">Rating</Typography>
       </Box>
