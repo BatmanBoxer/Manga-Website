@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/manga-website/static/js/main.2018f8c8.js",
-    "index.html": "/manga-website/index.html",
-    "main.2018f8c8.js.map": "/manga-website/static/js/main.2018f8c8.js.map"
+    "main.js": "/Manga-Website/static/js/main.2018f8c8.js",
+    "index.html": "/Manga-Website/index.html",
+    "main.2018f8c8.js.map": "/Manga-Website/static/js/main.2018f8c8.js.map"
   },
   "entrypoints": [
     "static/js/main.2018f8c8.js"
